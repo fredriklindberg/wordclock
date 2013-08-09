@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1240.1575"
+   height="1240.1575"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="clock.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="402.12545"
+     inkscape:cy="639.68223"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="mm"
+     inkscape:snap-page="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="false"
+     showborder="true"
+     borderlayer="false"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3257"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       units="mm"
+       spacingx="1mm"
+       spacingy="1mm"
+       dotted="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,187.79659)">
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="139.40105"
+       y="221.99649"
+       id="text2985"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2987"
+         x="139.40105"
+         y="221.99649" /></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3067"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(0,2)"><flowRegion
+         id="flowRegion3069"><rect
+           id="rect3071"
+           width="8.8916264"
+           height="339.66013"
+           x="-272.08377"
+           y="244.96245" /></flowRegion><flowPara
+         id="flowPara3073" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-444"
+       y="206.72437"
+       id="text3187"
+       sodipodi:linespacing="125%"
+       transform="translate(0,-152.36354)"><tspan
+         sodipodi:role="line"
+         x="-444"
+         y="206.72437"
+         id="tspan3193" /></text>
+    <rect
+       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.1681304px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect2989"
+       width="1238.9893"
+       height="1238.9894"
+       x="0.5840652"
+       y="-187.21263" />
+    <g
+       id="g3752"
+       transform="translate(30.235287,0.00421363)">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff"
+         id="path3388"
+         sodipodi:cx="214.96046"
+         sodipodi:cy="1160.9615"
+         sodipodi:rx="28.284271"
+         sodipodi:ry="28.284271"
+         d="m 243.24474,1160.9615 c 0,15.621 -12.6633,28.2843 -28.28428,28.2843 -15.62097,0 -28.28427,-12.6633 -28.28427,-28.2843 0,-15.6209 12.6633,-28.2842 28.28427,-28.2842 15.62098,0 28.28428,12.6633 28.28428,28.2842 z"
+         transform="matrix(0.31318706,0,0,0.31318706,952.61378,520.45567)" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff"
+         id="path3388-1"
+         sodipodi:cx="214.96046"
+         sodipodi:cy="1160.9615"
+         sodipodi:rx="28.284271"
+         sodipodi:ry="28.284271"
+         d="m 243.24474,1160.9615 c 0,15.621 -12.6633,28.2843 -28.28428,28.2843 -15.62097,0 -28.28427,-12.6633 -28.28427,-28.2843 0,-15.6209 12.6633,-28.2842 28.28427,-28.2842 15.62098,0 28.28428,12.6633 28.28428,28.2842 z"
+         transform="matrix(0.31318706,0,0,0.31318706,878.49846,520.45567)" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff"
+         id="path3388-1-9"
+         sodipodi:cx="214.96046"
+         sodipodi:cy="1160.9615"
+         sodipodi:rx="28.284271"
+         sodipodi:ry="28.284271"
+         d="m 243.24474,1160.9615 c 0,15.621 -12.6633,28.2843 -28.28428,28.2843 -15.62097,0 -28.28427,-12.6633 -28.28427,-28.2843 0,-15.6209 12.6633,-28.2842 28.28427,-28.2842 15.62098,0 28.28428,12.6633 28.28428,28.2842 z"
+         transform="matrix(0.31318706,0,0,0.31318706,810.38313,520.45567)" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff"
+         id="path3388-1-9-3"
+         sodipodi:cx="214.96046"
+         sodipodi:cy="1160.9615"
+         sodipodi:rx="28.284271"
+         sodipodi:ry="28.284271"
+         d="m 243.24474,1160.9615 c 0,15.621 -12.6633,28.2843 -28.28428,28.2843 -15.62097,0 -28.28427,-12.6633 -28.28427,-28.2843 0,-15.6209 12.6633,-28.2842 28.28427,-28.2842 15.62098,0 28.28428,12.6633 28.28428,28.2842 z"
+         transform="matrix(0.31318706,0,0,0.31318706,738.81273,520.45567)" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3435"
+       y="39.202522"
+       x="179.66066"
+       style="font-size:50.56712723px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans Mono;-inkscape-font-specification:Bitstream Vera Sans Mono"
+       xml:space="preserve"><tspan
+         dx="0"
+         style="font-size:91.02082062px;font-weight:bold;letter-spacing:0px;word-spacing:0px;fill:#ffffff;-inkscape-font-specification:Bitstream Vera Sans Mono Bold"
+         y="39.202522"
+         x="179.66066"
+         id="tspan3437"
+         sodipodi:role="line">IT IS  HALF  TEN</tspan><tspan
+         id="tspan3439"
+         style="font-size:91.02082062px;font-weight:bold;letter-spacing:0px;word-spacing:0px;fill:#ffffff;-inkscape-font-specification:Bitstream Vera Sans Mono Bold"
+         y="152.97855"
+         x="179.66066"
+         sodipodi:role="line">A QUARTER TWENTY</tspan><tspan
+         id="tspan3441"
+         style="font-size:91.02082062px;font-weight:bold;letter-spacing:0px;word-spacing:0px;fill:#ffffff;-inkscape-font-specification:Bitstream Vera Sans Mono Bold"
+         y="266.75458"
+         x="179.66066"
+         sodipodi:role="line">FIVE  MINUTES TO</tspan><tspan
+         id="tspan3443"
+         style="font-size:91.02082062px;font-weight:bold;letter-spacing:0px;word-spacing:0px;fill:#ffffff;-inkscape-font-specification:Bitstream Vera Sans Mono Bold"
+         y="380.53061"
+         x="179.66066"
+         sodipodi:role="line">PAST   ONE   TWO</tspan><tspan
+         id="tspan3445"
+         style="font-size:91.02082062px;font-weight:bold;letter-spacing:0px;word-spacing:0px;fill:#ffffff;-inkscape-font-specification:Bitstream Vera Sans Mono Bold"
+         y="494.30661"
+         x="179.66066"
+         sodipodi:role="line">THREE FOUR  FIVE</tspan><tspan
+         id="tspan3447"
+         style="font-size:91.02082062px;font-weight:bold;letter-spacing:0px;word-spacing:0px;fill:#ffffff;-inkscape-font-specification:Bitstream Vera Sans Mono Bold"
+         y="608.08264"
+         x="179.66066"
+         sodipodi:role="line">SIX  SEVEN EIGHT</tspan><tspan
+         id="tspan3449"
+         style="font-size:91.02082062px;font-weight:bold;letter-spacing:0px;word-spacing:0px;fill:#ffffff;-inkscape-font-specification:Bitstream Vera Sans Mono Bold"
+         y="721.8587"
+         x="179.66066"
+         sodipodi:role="line">NINE  TEN ELEVEN</tspan><tspan
+         id="tspan3451"
+         style="font-size:91.02082062px;font-weight:bold;letter-spacing:0px;word-spacing:0px;fill:#ffffff;-inkscape-font-specification:Bitstream Vera Sans Mono Bold"
+         y="835.6347"
+         x="179.66066"
+         sodipodi:role="line">TWELVE   O'CLOCK</tspan></text>
+  </g>
+</svg>

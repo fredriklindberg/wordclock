@@ -15,10 +15,15 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 #
+import os
+import sys
+import signal
 import time
 import math
 import sets
 from LedStrip_WS2801 import LedStrip_WS2801
+
+pidfile = "/var/run/clock.pid"
 
 words = {
     'it is' : { 'leds' : [3,4], 'text' : 'it is' },
@@ -99,11 +104,32 @@ def fade(ledStrip, pixels, step):
             res = False
     return res
 
+try:
+    pid = os.fork()
+    if pid > 0:
+        sys.exit(0)
+except OSError, e:
+    sys.stderr.write("Could not fork: %s" % e.strerror)
+    sys.exit(1)
+
+os.chdir("/")
+os.setsid()
+os.umask(0)
+
+running = True
+def cleanup(sig, frame):
+    global running
+    running = False
+
+signal.signal(signal.SIGTERM, cleanup)
+pid = str(os.getpid())
+file(pidfile, 'w+').write("%s\n" % pid)
+
 ledStrip = LedStrip_WS2801("/dev/spidev0.0", 40)
 ledStrip.update()
 
 prev_leds = []
-while True:
+while running:
     cur = time.localtime()
 
     min_5 = round(cur.tm_min / 5) * 5
@@ -133,3 +159,8 @@ while True:
 
     prev_leds = leds
     time.sleep(1)
+
+ledStrip.setAll([0, 0, 0])
+ledStrip.update()
+ledStrip.close()
+os.remove(pidfile)

@@ -1,0 +1,8 @@
+This is the driver code for my "word clock" based on WS2801 LED drivers
+running on a Raspberry Pi.
+
+Copyright (C) 2013 Fredrik Lindberg <fli@shapeshifter.se>
+
+chromesthesia comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions;
+see the LICENSE file for details.

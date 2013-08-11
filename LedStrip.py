@@ -14,9 +14,8 @@
 # For more information about this project please visit:
 # http://www.hackerspaceshop.com/ledstrips/raspberrypi-ws2801.html
 
-class LedStrip_WS2801:
-    def __init__(self, spiDevice, nLeds, nBuffers=1):
-        self.f = open(spiDevice, "w")
+class LedStrip(object):
+    def __init__(self, nLeds, nBuffers=1):
         self.nLeds = nLeds
         self.nBuffers = nBuffers
         self.buffers = []
@@ -27,14 +26,9 @@ class LedStrip_WS2801:
             self.buffers.append(ba)
 
     def close(self):
-        if (self.f != None):
-            self.f.close()
-            self.f = None
-
+        ""
     def update(self, bufferNr=0):
-        self.f.write(self.buffers[bufferNr])
-        self.f.flush()
-
+        ""
     def setAll(self, color, bufferNr=0):
         for i in range(0, self.nLeds):
             self.setPixel(i, color, bufferNr)
@@ -46,3 +40,22 @@ class LedStrip_WS2801:
         return [self.buffers[bufferNr][index*3],
                 self.buffers[bufferNr][index*3+2],
                 self.buffers[bufferNr][index*3+1]]
+
+class LedStrip_Dummy(LedStrip):
+    def __init__(self, nLeds, nBuffers=1):
+        super(LedStrip_Dummy, self).__init__(nLeds, nBuffers)
+
+class LedStrip_WS2801(LedStrip):
+    def __init__(self, spiDevice, nLeds, nBuffers=1):
+        self.f = open(spiDevice, "w")
+        super(LedStrip_WS2801, self).__init__(nLeds, nBuffers)
+
+    def close(self):
+        if (self.f != None):
+            self.f.close()
+            self.f = None
+
+    def update(self, bufferNr=0):
+        self.f.write(self.buffers[bufferNr])
+        self.f.flush()
+

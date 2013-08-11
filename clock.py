@@ -21,7 +21,7 @@ import signal
 import time
 import math
 import sets
-from LedStrip_WS2801 import LedStrip_WS2801
+from LedStrip import *
 
 pidfile = "/var/run/clock.pid"
 

@@ -15,6 +15,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 #
+from optparse import OptionParser
 import os
 import sys
 import signal
@@ -104,28 +105,42 @@ def fade(ledStrip, pixels, step):
             res = False
     return res
 
-try:
-    pid = os.fork()
-    if pid > 0:
-        sys.exit(0)
-except OSError, e:
-    sys.stderr.write("Could not fork: %s" % e.strerror)
-    sys.exit(1)
+def daemonize():
+    try:
+        pid = os.fork()
+        if pid > 0:
+            sys.exit(0)
+    except OSError, e:
+        sys.stderr.write("Could not fork: %s" % e.strerror)
+        sys.exit(1)
+    
+    os.chdir("/")
+    os.setsid()
+    os.umask(0)
 
-os.chdir("/")
-os.setsid()
-os.umask(0)
+parser = OptionParser(usage="%prog [options]")
+parser.add_option("-d", "--dry-run", dest="dryrun",
+    default=False, action="store_true",
+  help="Dry run/debug mode (no led output)")
+(opts, args) = parser.parse_args()
+
+if not opts.dryrun:
+    daemonize()
 
 running = True
 def cleanup(sig, frame):
     global running
     running = False
-
 signal.signal(signal.SIGTERM, cleanup)
-pid = str(os.getpid())
-file(pidfile, 'w+').write("%s\n" % pid)
+signal.signal(signal.SIGINT, cleanup)
 
-ledStrip = LedStrip_WS2801("/dev/spidev0.0", 40)
+if not opts.dryrun:
+    pid = str(os.getpid())
+    file(pidfile, 'w+').write("%s\n" % pid)
+    ledStrip = LedStrip_WS2801("/dev/spidev0.0", 40)
+else:
+    ledStrip = LedStrip_Dummy(40)
+
 ledStrip.update()
 
 prev_leds = []
@@ -149,6 +164,9 @@ while running:
     fadein = map(lambda x: [x, [255, 255, 255]], cur.difference(prev))
     fadeout = map(lambda x: [x, [0, 0, 0]], prev.difference(cur))
 
+    if len(fadein) > 0 and opts.dryrun:
+        print " ".join(map(lambda x: x['text'] , leds))
+
     while True:
         res = {}
         res[0] = fade(ledStrip, fadein, [3, 3, 3])
@@ -163,4 +181,7 @@ while running:
 ledStrip.setAll([0, 0, 0])
 ledStrip.update()
 ledStrip.close()
-os.remove(pidfile)
+try:
+    os.remove(pidfile)
+except:
+    ""

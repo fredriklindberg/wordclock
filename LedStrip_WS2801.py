@@ -15,34 +15,34 @@
 # http://www.hackerspaceshop.com/ledstrips/raspberrypi-ws2801.html
 
 class LedStrip_WS2801:
-	def __init__(self, spiDevice, nLeds, nBuffers=1):
-		self.f = open(spiDevice, "w")
-		self.nLeds = nLeds
-		self.nBuffers = nBuffers
-		self.buffers = []
-		for i in range(0, nBuffers):
-			ba = bytearray()
-			for l in range(0, nLeds):
-				ba.extend([0,0,0])
-			self.buffers.append(ba)
+    def __init__(self, spiDevice, nLeds, nBuffers=1):
+        self.f = open(spiDevice, "w")
+        self.nLeds = nLeds
+        self.nBuffers = nBuffers
+        self.buffers = []
+        for i in range(0, nBuffers):
+            ba = bytearray()
+            for l in range(0, nLeds):
+                ba.extend([0,0,0])
+            self.buffers.append(ba)
 
-	def close(self):
-		if (self.f != None):
-			self.f.close()
-			self.f = None
+    def close(self):
+        if (self.f != None):
+            self.f.close()
+            self.f = None
 
-	def update(self, bufferNr=0):
-		self.f.write(self.buffers[bufferNr])
-		self.f.flush()
+    def update(self, bufferNr=0):
+        self.f.write(self.buffers[bufferNr])
+        self.f.flush()
 
-	def setAll(self, color, bufferNr=0):
-		for i in range(0, self.nLeds):
-			self.setPixel(i, color, bufferNr)
+    def setAll(self, color, bufferNr=0):
+        for i in range(0, self.nLeds):
+            self.setPixel(i, color, bufferNr)
 
-	def setPixel(self, index, color, bufferNr=0):
-		self.buffers[bufferNr][index*3:index*3+3] = (color[0], color[2], color[1])
+    def setPixel(self, index, color, bufferNr=0):
+        self.buffers[bufferNr][index*3:index*3+3] = (color[0], color[2], color[1])
 
-	def getPixel(self, index, bufferNr=0):
-		return [self.buffers[bufferNr][index*3],
-				self.buffers[bufferNr][index*3+2],
-				self.buffers[bufferNr][index*3+1]]
+    def getPixel(self, index, bufferNr=0):
+        return [self.buffers[bufferNr][index*3],
+                self.buffers[bufferNr][index*3+2],
+                self.buffers[bufferNr][index*3+1]]
